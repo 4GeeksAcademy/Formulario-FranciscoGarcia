@@ -11,47 +11,50 @@
             <div class="container-header bg-light p-2 m-2">
                 <h1>Payment form example</h1>
             </div>
-
+            <div class="alert alert-danger m-3" role="alert">
+                Some fields are missing
+            </div>
+            <form>    
             <div class="container-body mt-3">
                 <div class="row m-2">
-                    <div class="col-5">
+                    <div class="col-md-5">
                         <p>Card #</p>
-                        <input type="text" class="form-control" placeholder="XXXXXXXXXXXXXXXX">                    </div>
-                    <div class="col-3">
+                        <input type="text" class="form-control" placeholder="XXXXXXXXXXXXXXXX" required>                    </div>
+                    <div class="col-md-3">
                         <p>CVC #</p>
-                        <input type="text" class="form-control" placeholder="0000">                    </div>
-                    <div class="col-4">
+                        <input type="text" class="form-control" placeholder="0000" required>                    </div>
+                    <div class="col-md-4">
                         <p>Amount</p>
-                        <input type="text" class="form-control" placeholder="Amount">                    </div>
+                        <input type="text" class="form-control" placeholder="$Amount">                    </div>
                 </div>
 
                 <div class="row m-2">
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <p>First Name</p>
                         <input type="text" class="form-control" placeholder="">                    </div>
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <p>Last Name</p>
                         <input type="text" class="form-control" placeholder="">                    </div>
                 </div>
 
                 <div class="row m-2">
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <p>City</p>
                         <input type="text" class="form-control" placeholder="">                    </div>
-                    <div class="col-3">
+                    <div class="col-md-3">
                         <p>State</p>
                         <select class="form-select">
                             <option>Pick a state</option>
                             <option>California</option>
                             <option>New York</option>
                         </select>                                                                  </div>
-                    <div class="col-3">
+                    <div class="col-md-3">
                         <p>Message</p>
                         <input type="text" class="form-control" placeholder="">                    </div>
                 </div>
 
                 <div class="row m-2">
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <p>We accept:</p>
                         <input type="radio" name="color" value="Mastercard-logo" />
                         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" width="40px">
@@ -62,7 +65,7 @@
                         <input type="radio" name="color" value="Mastercard-logo" />
                         <img src="data:image/png;base64,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" width="40px">
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <p>Message</p>
                         <textarea class="form-control" rows="3" placeholder="Add any notes here."></textarea>                    </div>
                 </div>
@@ -71,7 +74,8 @@
             <div class="d-flex justify-content-end me-3 mt-4 bg-light">
                 <button type="button" class="btn btn-secondary me-2">Cancel</button>
                 <button type="submit" class="btn btn-primary">Send</button>
-            </div>         
+            </div>  
+            </form>       
         </div>
 
 
